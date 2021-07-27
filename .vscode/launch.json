@@ -33,6 +33,18 @@
       "outFiles": [
         "${workspaceFolder}/out/**/*.js"
       ] 
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ts-node",
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "${workspaceFolder}/src/app.ts"
+      ]
     }
   ]
 }

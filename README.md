@@ -56,5 +56,28 @@ vscode调试 ts方式
 
 ### ts-node 方式
 
+直接在 `JavaScript Debug Terminal` 的控制台中
 
+```
+node file.js // 可以调试js
+ts-node src/app.ts
+```
 
+在 launch.json 中配置
+
+```
+{
+  "type": "node",
+  "request": "launch",
+  "name": "ts-node",
+  "runtimeArgs": [
+    "-r",
+    "ts-node/register"
+  ],
+  "args": [
+    "${workspaceFolder}/src/app.ts"
+  ]
+}
+```
+
+直接在 `JavaScript Debug Terminal` 的控制台中 调试最为方便
