@@ -18,6 +18,21 @@
       "outFiles": [
         "${workspaceFolder}/out/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ts-tasks",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/app.ts",
+      "preLaunchTask": "tsc: 构建 - tsconfig.json",
+      "sourceMaps": true,
+      "smartStep": true,
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ] 
     }
   ]
 }
