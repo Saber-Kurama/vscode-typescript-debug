@@ -81,3 +81,29 @@ ts-node src/app.ts
 ```
 
 直接在 `JavaScript Debug Terminal` 的控制台中 调试最为方便
+
+一些问题
+`TS6133: 'saber' is declared but its value is never read.`
+
+```
+  tsconfig 
+  {
+    "noUnusedLocals": true, // 修改成false
+  }
+
+```
+`(node:20769) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.`
+
+```
+  tsconfig 
+  {
+    "module": "esnext", // esnext 修改 CommonJS 或者注释掉
+  }
+
+ts-node 找不到 声明文件
+
+```
+
+```
+
+[将 ts-node 与全局类型一起使用](https://blakewilliams.me/posts/using-ts-node-with-global-types)
