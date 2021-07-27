@@ -1,0 +1,25 @@
+{
+  "name": "vscode-typescript-debug",
+  "version": "1.0.0",
+  "description": "vscode调试 ts方式",
+  "main": "index.js",
+  "scripts": {
+    "start": "node out/app.js",
+    "prestart": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saber-Kurama/vscode-typescript-debug.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saber-Kurama/vscode-typescript-debug/issues"
+  },
+  "homepage": "https://github.com/Saber-Kurama/vscode-typescript-debug#readme",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  }
+}
