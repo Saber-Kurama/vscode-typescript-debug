@@ -3,6 +3,7 @@ vscode调试 ts方式
 
 ## 参考文章
 
+[在 VsCode 中调试 TypeScript](https://juejin.cn/post/6902333925562499086)
 
 ### tasks.json和launch.json
 
@@ -94,16 +95,37 @@ ts-node src/app.ts
 ```
 `(node:20769) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.`
 
+
 ```
   tsconfig 
   {
     "module": "esnext", // esnext 修改 CommonJS 或者注释掉
   }
+```
 
 ts-node 找不到 声明文件
 
-```
-
-```
 
 [将 ts-node 与全局类型一起使用](https://blakewilliams.me/posts/using-ts-node-with-global-types)
+
+### deno 方式
+
+问题1： 解决 `.ts` 后缀问题
+
+[ vscode-deno 插件](https://github.com/axetroy/vscode-deno)
+[deno 初体验，实战记录一个node项目迁移到deno需要做什么](https://github.com/flytam/blog/issues/19)
+
+
+```
+{
+  "name": "Deno",
+  "type": "pwa-node",
+  "request": "launch",
+  "cwd": "${workspaceFolder}",
+  "runtimeExecutable": "deno",
+  "runtimeArgs": ["run", "--inspect-brk", "-A", "${file}"],
+  "attachSimplePort": 9229
+}
+```
+
+`deno run --inspect-brk -A 当前文件`
